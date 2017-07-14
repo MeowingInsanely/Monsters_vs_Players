@@ -1,0 +1,5 @@
+## YAML Template.
+---
+name: C1
+version: BETA 1.0
+main: org.cat.C1
