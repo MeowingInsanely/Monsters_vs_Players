@@ -11,12 +11,12 @@ import org.bukkit.plugin.java.JavaPlugin;
  *
  * @author MeowingInsanely
  */
-public class C1 extends JavaPlugin {  
+public class main extends JavaPlugin {  
     @Override
     public void onEnable() {
         getLogger().info("onEnable haz beeen summoned!");
         
-        this.getCommand("c0at").setExecutor(new C2());
+        this.getCommand("cat").setExecutor(new CatCommand());
     }
 
     @Override

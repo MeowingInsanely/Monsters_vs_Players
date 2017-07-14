@@ -17,7 +17,7 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author MeowingInsanely
  */
-public class C2 implements CommandExecutor  {
+public class CatCommand implements CommandExecutor  {
 
     @Override
     public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {

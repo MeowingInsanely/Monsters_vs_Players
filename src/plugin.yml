@@ -7,4 +7,4 @@ main: org.cat.C1
 commands:
     c0at:
         description: Gives you stuff
-        usage: /c0at
+        usage: /cat
