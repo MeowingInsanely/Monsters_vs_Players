@@ -5,6 +5,7 @@
  */
 package org.cat;
 
+import static org.bukkit.Bukkit.getLogger;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -35,10 +36,12 @@ public class CatCommand implements CommandExecutor  {
 
             // Give the player our items (comma-seperated list of all ItemStack)
             meowPlayer.getInventory().addItem(book, rawFish);
-        }
-
+        } else { 
+          getLogger().info("hai nun human!");
+      }
+          
         // If the player (or console) uses our command correct, we can return true
         return true;
     }
-    
+
 }
