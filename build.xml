@@ -72,6 +72,6 @@
     -->
     
     <target name="-post-jar">
-        <copy file="dist/Cats.jar" todir="C:\\Users\\Nina\\Downloads\\BuildToolsGUI\\BuildTools\plugins"/>
+        <copy file="dist/Monsters_vs_Players.jar" todir="C:\Stefan\Games\MCLauncher\Spigot\BuildTools\plugins"/>
  </target>
 </project>
