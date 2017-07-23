@@ -9,6 +9,6 @@ package org.cat;
  *
  * @author Nina
  */
-public class C3 { 
+public class Day {
     
 }
