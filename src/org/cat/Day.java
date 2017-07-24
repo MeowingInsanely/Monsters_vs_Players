@@ -9,6 +9,7 @@ package org.cat;
  *
  * @author MeowingInsanely
  */
+import static org.bukkit.Bukkit.getLogger;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -21,7 +22,7 @@ public class Day extends BukkitRunnable {
     int countdown = 40;
 
     public Day() {
-        world = ???.getTheWorld();
+        world = Bukkit.getWorlds().get(0);
         world.setTime(23000);
     }
 
@@ -35,7 +36,7 @@ public class Day extends BukkitRunnable {
 
         // TODO: Vote
         if (world.getTime() >= 4600) {
-            getLogger().info("Vote time has begun")
+            getLogger().info("Vote time has begun");
         }
         // TODO: Defense
         // TODO: Judgement
