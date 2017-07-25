@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Monsters_vs_Players">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/Monsters_vs_Players.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
