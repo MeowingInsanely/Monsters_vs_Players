@@ -45,7 +45,9 @@ public class Night extends BukkitRunnable {
     // TODO:Show events
     // TODO:Show counter events
     
-        //TODO: pew pew!
+    //TODO: pew pew!
+    
+        // Day Start
         if (currentTime >= 0) {
             this.cancel();
         new Day().runTaskTimer(Main.cat, 20, 20);
