@@ -44,23 +44,23 @@ public class Night extends BukkitRunnable {
     // TODO:Night Stop
     // TODO:Show events
     // TODO:Show counter events
-    
+
     //TODO: pew pew!
-    
+
         // Day Start
         if (currentTime >= 0) {
             this.cancel();
         new Day().runTaskTimer(Main.cat, 20, 20);
         }
-        
-        
+
+
         // Tell the time to everybody (Spectators???)
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.setLevel(currentTime);
         }
-        
-        
-        
+
+
+
         // Countdown
         currentTime--;
     }
