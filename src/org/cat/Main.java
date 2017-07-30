@@ -17,9 +17,15 @@ public class Main extends JavaPlugin {
     
     @Override
     public void onEnable() {
-        
+        //Useful links:
+        //https://bukkit.gamepedia.com/Main_Page
+        //https://hub.spigotmc.org/javadocs/spigot/
+        //https://www.spigotmc.org/wiki/spigot-plugin-development/
+        //https://www.spigotmc.org/wiki/plugin-snippets/
+
+
         cat = cat = cat = this;
-        
+
         getLogger().info("onEnable haz beeen summoned!");
         
         this.getCommand("cat").setExecutor(new CatCommand());
@@ -27,8 +33,8 @@ public class Main extends JavaPlugin {
            new Day().runTaskTimer(cat, 0, 20);
     }
 
-    
-    
+
+
     @Override
     public void onDisable() {
         getLogger().info("onDisable haz beeen summoned!");

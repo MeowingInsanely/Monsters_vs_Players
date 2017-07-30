@@ -70,7 +70,7 @@ public class Day extends BukkitRunnable {
         // Night Start
         if (currentTime >= 0) {
             this.cancel();
-           new Night().runTaskTimer(Main.cat, 20, 20);
+           new Night().runTaskTimer(Main.cat, 20 ,20);
         }
         
         // Tell the time to everybody (Spectators???)
