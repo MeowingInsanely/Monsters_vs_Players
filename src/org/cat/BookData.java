@@ -11,15 +11,11 @@ import org.bukkit.inventory.ItemStack;
 
 //import org.bukkit.ChatColor;
 //import org.bukkit.Material;
-<<<<<<< HEAD
 
 //import org.bukkit.inventory.ItemStack;
 //
 // https://bukkit.gamepedia.com/Main_Page
 
-=======
-//import org.bukkit.inventory.ItemShttps://bukkit.gamepedia.com/Main_Pagetack;
->>>>>>> 591de65d31178290947dec840beadc52fb2ef4cd
 //import org.bukkit.inventory.meta.BookMeta;
 
 
