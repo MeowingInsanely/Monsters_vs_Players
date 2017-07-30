@@ -1,4 +1,4 @@
 package org.cat.role;
 
-public class Ocelot {
+public class Ocelot extends BaseRole {
 }
