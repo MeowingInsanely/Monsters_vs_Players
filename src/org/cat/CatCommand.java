@@ -36,10 +36,10 @@ public class CatCommand implements CommandExecutor  {
 
             // Give the player our items (comma-seperated list of all ItemStack)
             meowPlayer.getInventory().addItem(book, rawFish);
-        } else { 
+        } else {
           getLogger().info("hai nun human!");
       }
-          
+
         // If the player (or console) uses our command correct, we can return true
         return true;
     }

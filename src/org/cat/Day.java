@@ -25,7 +25,7 @@ public class Day extends BukkitRunnable {
         world = Bukkit.getWorlds().get(0);
         world.setTime(23000);
     }
-    
+
     @Override
     public void run() {
         world.setTime(world.getTime() + 140);
@@ -37,12 +37,12 @@ public class Day extends BukkitRunnable {
 
         //TODO:Show Deaths
         //TODO:Show Wills/Deathnotes/Roles
-        
+
         //Day Start
         if (currentTime == 40) {
             getLogger().info("Good Meowning!");
         }
-        
+
         //Vote Start
         if (currentTime == 25) {
             getLogger().info("Vote time has begun");
@@ -63,16 +63,16 @@ public class Day extends BukkitRunnable {
         // TODO: Will
         // TODO: Role
         // TODO: Repeat -> Vote
-        
+
         // TODO: Night
         //TODO: pew pew!
-        
+
         // Night Start
         if (currentTime >= 0) {
             this.cancel();
            new Night().runTaskTimer(Main.cat, 20, 20);
         }
-        
+
         // Tell the time to everybody (Spectators???)
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.setLevel(currentTime);
