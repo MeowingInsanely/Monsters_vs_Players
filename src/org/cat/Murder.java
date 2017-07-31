@@ -1,6 +1,6 @@
 package org.cat;
 
-import
+//import
 
-public class Murder {
+public interface Murder {
 }
