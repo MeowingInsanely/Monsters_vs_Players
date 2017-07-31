@@ -1,53 +1,62 @@
 
 #List of Characters:
 
-  Monsters
++ Monsters
+  - Creeper: Leaderp
+  - Skeleton: Contract Killer
 
-  Mobs
-  Ocelot: Serial Killer
++ Mobs
+  - Ocelot: Serial Killer
 
-  Villagers
++ Villagers
+   - Villager (Librarian): Doctor role
 
-  Transforming
+#Planned
++ Monsters
+  - Zombie: Framer
++ Mobs
++ Villagers
+   - Squid: Mayor
++ Transforming
 
-+List of Mobs
+#List of Mobs
 
-Bats
-Blaze
-Cave Spiders
-Chicken
-Cows
-Creeper
-Elder Guardian
-Ender Dragon
-Enderman
-Endermite
-Evoker
-Ghast
-Guardian
-Humans (The Player)
-Iron Golem
-Llama
-Magma Cube
-Mooshrooms
-Ocelots (Cats)
-Parrot
-Pigs
-Polar Bear
-Rabbit
-Sheep
-Shulker
-Silverfish
-Skeleton
-Slime
-Snow Golem
-Spider Jockey
-Spiders
-Squid
-Vex
-Villagers
-Vindicator
-Wolves
-Wolves (mad)
-Zombie Pigman
-Zombies
+- Bats
+- Blaze
+- Cat
+- Cave Spider
+- Chicken
+- Cows
+- Creeper
+- Elder Guardian
+- Ender Dragon
+- Enderman
+- Endermite
+- Evoker
+- Ghast
+- Guardian
+- Human (The Player): Default
+- Iron Golem
+- Llama
+- Magma Cube
+- Mooshroom
+- Ocelot
+- Parrot
+- Pig
+- Polar Bear
+- Rabbit
+- Sheep
+- Shulker
+- Silverfish
+- Skeleton
+- Slime
+- Snow Golem
+- Spider
+- Squid
+- Vex
+- Villager: Villager (Townie)
+- Vindicator
+- Wolf
+- Wolf (mad)
+- Zombie Pigman
+- Zombie

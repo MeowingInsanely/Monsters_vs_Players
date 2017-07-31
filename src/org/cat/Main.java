@@ -6,6 +6,7 @@
 package org.cat;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.cat.Commands.Start;
 
 /**
  *
@@ -17,12 +18,17 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        //Useful links:
+        //https://bukkit.gamepedia.com/Main_Page
+        //https://hub.spigotmc.org/javadocs/spigot/
+        //https://www.spigotmc.org/wiki/spigot-plugin-development/
+        //https://www.spigotmc.org/wiki/plugin-snippets/
 
         cat = cat = cat = this;
 
         getLogger().info("onEnable haz beeen summoned!");
 
-        this.getCommand("cat").setExecutor(new CatCommand());
+        this.getCommand("start").setExecutor(new Start());
 
            new Day().runTaskTimer(cat, 0, 20);
     }
