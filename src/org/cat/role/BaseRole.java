@@ -1,8 +1,10 @@
 package org.cat.role;
 
+
 import org.cat.role.mobs.Ocelot_SerialKiller;
 import org.cat.role.monsters.Creeper_Leaderp;
 import org.cat.role.monsters.Skeleton_ContractKiller;
+
 
 public class BaseRole {
 
@@ -24,9 +26,9 @@ public class BaseRole {
      */
     public static Class<BaseRole>[] getRoles() {
         return new Class[] {
-                Ocelot_SerialKiller.class
-                Creeper_Leaderp.class
-                Skeleton_ContractKiller.class
+                Ocelot_SerialKiller.class,
+                Creeper_Leaderp.class,
+                Skeleton_ContractKiller.class,
         };
 
     }

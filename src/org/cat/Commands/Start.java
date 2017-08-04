@@ -1,5 +1,6 @@
 package org.cat.Commands;
 
+
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,15 +18,14 @@ public class Start implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
+
         start();
+
         return true;
     }
 
     public void start() {
         Class<BaseRole>[] roleList = BaseRole.getRoles();
-
-
-
 
         Utils.rng.nextInt(roleList.length);//Gen a random number
 
@@ -33,6 +33,7 @@ public class Start implements CommandExecutor {
         BaseRole b = roleList[0].cast(newPlayer); //Convert the player to some role...
 
         Main.cat.players = new BaseRole[Bukkit.getServer().getOnlinePlayers().size()];
+
 
 
         new Day().runTaskTimer(Main.cat, 20, 20);

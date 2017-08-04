@@ -34,10 +34,6 @@ public class Main extends JavaPlugin {
         }
          */
 
-        for (Player player : Bukkit.getOnlinePlayers()) {
-            player.sendMessage("It works!");
-        }
-
         cat = this;
         getLogger().info("onEnable haz beeen summoned!");
 
