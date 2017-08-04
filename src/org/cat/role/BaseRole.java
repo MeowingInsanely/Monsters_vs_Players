@@ -1,5 +1,7 @@
 package org.cat.role;
 
+import sun.util.resources.cldr.ta.CalendarData_ta_IN;
+
 public class BaseRole {
 
     String lastWill;
@@ -15,5 +17,13 @@ public class BaseRole {
 
     }
 
+    /**
+     * Register all the classes here
+     */
+    public static Class<BaseRole>[] getRoles() {
+        return new Class[] {
+                Ocelot_SerialKiller.class
+        };
 
+    }
 }

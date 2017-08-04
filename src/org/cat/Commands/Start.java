@@ -6,10 +6,27 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.cat.Day;
 import org.cat.Main;
+import org.cat.Utils;
+import org.cat.role.BaseRole;
+import sun.misc.BASE64Decoder;
+
+import java.util.Random;
 
 public class Start implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+
+
+        return true;
+    }
+
+    public void start() {
+        Class<BaseRole>[] roleList = BaseRole.getRoles();
+
+        Utils.rng.nextInt();
+
+        BaseRole b = (roleList[0].cast(new BaseRole()));
+
 
         new Day().runTaskTimer(Main.cat, 20, 20);
         //TODO: Assign roles
@@ -17,7 +34,7 @@ public class Start implements CommandExecutor {
 
         double random = Math.random(); //Generates a random number between 0 and 0.9999999999
 
-        int roleNumber = (int) Math.ceil(random * 4);
+
 
 
 
@@ -30,23 +47,6 @@ public class Start implements CommandExecutor {
 
 
 
-        //Java is verbose (wordy)
-
-        String[] roleList = new String[]{
-                "creeper", // 0
-                "ocelot",  // 1
-                "Farmer",  // 2
-                "ninja"    // 3
-
-        };
-
-        String someRole = roleList[roleNumber];
-
-        if (roleNumber == 0) { //creeper
-
-
-            //https://bukkit.gamepedia.com/Plugin_Tutorial#Metadata
-        }
     }
 }
 

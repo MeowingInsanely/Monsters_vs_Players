@@ -7,6 +7,7 @@ package org.cat;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.cat.Commands.Start;
+import org.cat.role.BaseRole;
 
 /**
  *
@@ -15,6 +16,7 @@ import org.cat.Commands.Start;
 public class Main extends JavaPlugin {
 
     public static Main cat;
+    public BaseRole players;
 
     @Override
     public void onEnable() {
