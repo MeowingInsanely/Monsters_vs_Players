@@ -5,8 +5,11 @@
  */
 package org.cat;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Server;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.cat.Commands.Start;
+import org.cat.role.BaseRole;
 
 /**
  *
@@ -15,6 +18,7 @@ import org.cat.Commands.Start;
 public class Main extends JavaPlugin {
 
     public static Main cat;
+    public BaseRole[] players;
 
     @Override
     public void onEnable() {
@@ -24,8 +28,17 @@ public class Main extends JavaPlugin {
         //https://www.spigotmc.org/wiki/spigot-plugin-development/
         //https://www.spigotmc.org/wiki/plugin-snippets/
 
-        cat = cat = cat = this;
+        /*
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            player.sendMessage("It works!");
+        }
+         */
 
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            player.sendMessage("It works!");
+        }
+
+        cat = this;
         getLogger().info("onEnable haz beeen summoned!");
 
         this.getCommand("start").setExecutor(new Start());
