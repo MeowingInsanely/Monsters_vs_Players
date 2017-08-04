@@ -19,39 +19,10 @@ public class Start implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
 
-        start();
+        Main.cat.start();
 
         return true;
     }
 
-    public void start() {
-        Class<BaseRole>[] roleList = BaseRole.getRoles();
-
-        Utils.rng.nextInt(roleList.length);//Gen a random number
-
-        BaseRole newPlayer = new BaseRole();
-        BaseRole b = roleList[0].cast(newPlayer); //Convert the player to some role...
-
-        Main.cat.players = new BaseRole[Bukkit.getServer().getOnlinePlayers().size()];
-
-
-
-        new Day().runTaskTimer(Main.cat, 20, 20);
-        //TODO: Assign roles
-
-
-        double random = Math.random(); //Generates a random number between 0 and 0.9999999999
-
-
-
-
-
-        //4.000000000
-        //3.9 v
-        //... v
-        //3.2 v
-        //3.1 v
-        //3.00000000000
-    }
 }
 
