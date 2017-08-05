@@ -11,6 +11,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.cat.Commands.Start;
 import org.cat.role.BaseRole;
+import org.cat.role.monsters.IMonster;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -52,36 +57,32 @@ public class Main extends JavaPlugin {
 
 
     public void start() {
-        Class<BaseRole>[] roleList = BaseRole.getRoles();
+
+
+        ArrayList<Class<BaseRole>> roleList = new ArrayList<Class<BaseRole>>(Arrays.asList(BaseRole.getRoles()));
+
         playerRoles = new BaseRole[Bukkit.getServer().getOnlinePlayers().size()];
+
+
+
+
+        int counter = 0;
+        while (counter < playerRoles.length) {
+            getLogger().info("player: " + counter);
+
+            int randomNumber = Utils.rng.nextInt(roleList.length); //A magical random number
+
+            BaseRole newPlayerRole = new BaseRole(); //Create a new one
+
+            playerRoles[counter] = roleList.get(randomNumber).cast(newPlayerRole); //Convert the player to some role...
+            roleList.remove(randomNumber); //Role was already used
+            counter++;
+        }
+
 
         //No duplicates
         //at least 1 of each
-        playerRoles[].setLastWill("I am a cat");
 
-
-
-
-        Utils.rng.nextInt(roleList.length);//Gen a random number
-
-        BaseRole newPlayer = new BaseRole();
-        BaseRole b = roleList[0].cast(newPlayer); //Convert the player to some role...
-
-        new Day().runTaskTimer(Main.cat, 20, 20);
-        //TODO: Assign roles
-
-
-        double random = Math.random(); //Generates a random number between 0 and 0.9999999999
-
-
-
-
-
-        //4.000000000
-        //3.9 v
-        //... v
-        //3.2 v
-        //3.1 v
-        //3.00000000000
+        new Day().runTaskTimer(Main.cat, 20, 20); //Starts the game
     }
 }

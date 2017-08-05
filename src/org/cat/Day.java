@@ -35,8 +35,9 @@ public class Day extends BukkitRunnable {
             world.setTime(world.getTime() - 24000);
         }
 
-        //TODO:Show Deaths
-        //TODO:Show Wills/Deathnotes/Roles
+        // TODO:Show Deaths
+        // TODO:Show Wills/Deathnotes/Roles
+        // TODO: Check if Game has won
 
         //Day Start
         if (currentTime == 40) {
@@ -62,10 +63,10 @@ public class Day extends BukkitRunnable {
         // TODO: Send Graveyard
         // TODO: Will
         // TODO: Role
+        // TODO: Check if Game has won
         // TODO: Repeat -> Vote
-
         // TODO: Night
-        //TODO: pew pew!
+        // TODO: pew pew!
 
         // Night Start
         if (currentTime >= 0) {
