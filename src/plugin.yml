@@ -8,3 +8,7 @@ commands:
     start:
         description: Starts the game
         usage: /start
+
+    end:
+        description: Ends the game
+        usage: /end
