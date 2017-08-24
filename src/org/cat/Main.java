@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.cat.role.BaseRole;
 import org.cat.role.monsters.IMonster;
-import org.cat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,6 +20,11 @@ import java.util.List;
  * @author MeowingInsanely
  */
 public class Main extends JavaPlugin {
+
+    //A constant variable
+    //It will always be 7
+    //Used to make the code more readable
+    public static final int MIN_PLAYERS = 7;
 
     public static Main cat;
     public BaseRole[] playerRoles;
@@ -42,10 +46,8 @@ public class Main extends JavaPlugin {
         cat = this;
         getLogger().info("onEnable haz beeen summoned!");
 
-        this.getCommand("start").setExecutor(new Commands.Start());
+        this.getCommand("start").setExecutor(new org.cat.Commands.Start());
     }
-
-
 
     @Override
     public void onDisable() {
@@ -58,8 +60,14 @@ public class Main extends JavaPlugin {
     }
 
     public void start() {
-
         int playerCount = Bukkit.getServer().getOnlinePlayers().size();
+        if(playerCount < MIN_PLAYERS) {
+            Bukkit.broadcastMessage("At least " + MIN_PLAYERS + " players are needed to start the game.");
+            //return stops the function and replies with the return value
+            //In this case, it replies with nothing (void)
+            return;
+        }
+
     //if ().getOnlinePlayersgetonli ().size < 7 {
     // Do not start game. Annonuce number of needed players
   // == 7 vote for start game fast paced.
@@ -67,32 +75,37 @@ public class Main extends JavaPlugin {
   // == 12 start normal pace vote
   //}
 
-
-
         ArrayList<Class<BaseRole>> roleList = new ArrayList<Class<BaseRole>>(Arrays.asList(BaseRole.getRoles()));
-
         playerRoles = new BaseRole[playerCount];
-
-
-
 
         int counter = 0;
         while (counter < playerRoles.length) {
-            getLogger().info("player: " + counter);
-
             int randomNumber = Utils.rng.nextInt(roleList.size()); //A magical random number
 
-            BaseRole newPlayerRole = new BaseRole(); //Create a new one
 
-            playerRoles[counter] = roleList.get(randomNumber).cast(newPlayerRole); //Convert the player to some role...
-            roleList.remove(randomNumber); //Role was already used
+            //Same piece of code
+            //
+            BaseRole newPlayerRole = new BaseRole(); //Create a new player
+            Class<BaseRole> randomRole = roleList.get(randomNumber); //Pick a random role
+            playerRoles[counter] = randomRole.cast(newPlayerRole); //Convert the player to the random role
+            //
+
+
+            //Same piece of code
+            //
+            playerRoles[counter] = roleList
+                                    .get(randomNumber)
+                                    .cast(new BaseRole());
+            //
+
+            roleList.remove(randomNumber); //Role has been used up
+
+            getLogger().info("Player " + counter + " is a " + playerRoles[counter].getClass().getName());
+
             counter++;
-            
-            getLogger().info("Game has woke up.");
-          
         }
 
-
+        getLogger().info("Game has woke up.");
         //No duplicates
         //at least 1 of each
 
