@@ -7,7 +7,7 @@ package org.cat;
 
 /**
  *
- * @author MeowingInsanely
+ * @author MeowingInsanely & Stefnotch
  */
 import static org.bukkit.Bukkit.getLogger;
 import org.bukkit.Bukkit;
@@ -35,8 +35,8 @@ public class Day extends BukkitRunnable {
             world.setTime(world.getTime() - 24000);
         }
 
-        // TODO:Show Deaths
-        // TODO:Show Wills/Deathnotes/Roles
+        // TODO: Show Deaths
+        // TODO: Show Wills/Deathnotes/Roles
         // TODO: Check if Game has won
 
         //Day Start
@@ -52,19 +52,12 @@ public class Day extends BukkitRunnable {
         // TODO: Judgement
         // TODO: Last Words
         // TODO: Murder
+          //Give player Event Flag: Dead
         // TODO: Send Graveyard
         // TODO: Will
         // TODO: Role
-        // TODO: Repeat -> Vote
-        // TODO: Night        // TODO: Defense
-        // TODO: Judgement
-        // TODO: Last Words
-        // TODO: Murder
-        // TODO: Send Graveyard
-        // TODO: Will
-        // TODO: Role
-        // TODO: Check if Game has won
-        // TODO: Repeat -> Vote
+        // TODO: GameCheck
+        // TODO: Repeat -> Vote <<-->
         // TODO: Night
         // TODO: pew pew!
 
@@ -82,3 +75,17 @@ public class Day extends BukkitRunnable {
         currentTime--;
     }
 }
+
+
+  //GameCheck.java
+  // Check instance of Event Flag: Death, on players
+  // Count Alive (does not have a death) members of affiliation
+  //STANDARD CASES
+  // If IMonster == 0 then IVillager win + NeturalIMobNetural 
+  // If IVillager == 0 then IMonster win + IMobNeutral
+  //SPECIAL CASES
+  // If IMonster && IVillager == 0 -IMobEvil- Ocelot win + IMobNeutral
+  
+  
+  
+  

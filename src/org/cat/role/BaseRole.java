@@ -7,19 +7,19 @@ import org.cat.role.monsters.Skeleton_ContractKiller;
 import org.cat.role.villagers.Librarian_Doctor;
 
 
-public class BaseRole {
+public abstract class BaseRole {
 
     private String lastWill;
 
 
 
-    //Also, add a bunch of "Hooks".
+    //Also, add a bunch of events
     //Meaning: Functions that get called when something happens.
-    public void OnTrial() {
+    public void onTrial() {
 
     }
 
-    public void DeathHook() {
+    public void onDeath() {
 
     }
 
@@ -33,6 +33,8 @@ public class BaseRole {
         lastWill = newLastWill;
     }
 
+    //This means that every role HAS TO have a getHelp function
+    public abstract String getHelp();
 
 
     /**

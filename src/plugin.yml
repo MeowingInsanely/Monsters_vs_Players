@@ -1,6 +1,6 @@
 ## YAML Template.
 ---
-name: C1
+name: Monsters vs Players
 version: BETA 1.0
 main: org.cat.main
 

@@ -26,6 +26,11 @@ public class Main extends JavaPlugin {
     //Used to make the code more readable
     public static final int MIN_PLAYERS = 7;
 
+    //What's the current game state?
+    //State is an enum, go check it out! (Ctrl+Click on State)
+    public static State state = State.InGame;
+
+
     public static Main cat;
     public BaseRole[] playerRoles;
 
@@ -82,21 +87,9 @@ public class Main extends JavaPlugin {
         while (counter < playerRoles.length) {
             int randomNumber = Utils.rng.nextInt(roleList.size()); //A magical random number
 
-
-            //Same piece of code
-            //
-            BaseRole newPlayerRole = new BaseRole(); //Create a new player
-            Class<BaseRole> randomRole = roleList.get(randomNumber); //Pick a random role
-            playerRoles[counter] = randomRole.cast(newPlayerRole); //Convert the player to the random role
-            //
-
-
-            //Same piece of code
-            //
             playerRoles[counter] = roleList
                                     .get(randomNumber)
-                                    .cast(new BaseRole());
-            //
+                                    .cast(new Object());
 
             roleList.remove(randomNumber); //Role has been used up
 
@@ -111,4 +104,11 @@ public class Main extends JavaPlugin {
 
         new Day().runTaskTimer(Main.cat, 20, 20); //Starts the game
     }
+
+    
 }
+
+//Let's let the player's role do that? (Check out BaseRole.java)
+//public void help() {
+  // show player role info
+//}
